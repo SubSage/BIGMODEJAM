@@ -1,11 +1,61 @@
-[gd_scene load_steps=6 format=3 uid="uid://c18uua2jh8130"]
+[gd_scene load_steps=13 format=3 uid="uid://bddet3ydv6spm"]
 
 [ext_resource type="Script" path="res://units/player/player.gd" id="1_5gs8p"]
-[ext_resource type="Texture2D" uid="uid://dv5mf04ttkdgp" path="res://icon.svg" id="2_dhu70"]
-[ext_resource type="Texture2D" uid="uid://dgj45bbpndtg4" path="res://assets/visual/noun_circle_dash_pattern_1473951.svg" id="3_87g2l"]
+[ext_resource type="Texture2D" uid="uid://dgj45bbpndtg4" path="res://units/player/noun_circle_dash_pattern_1473951.svg" id="2_cmxhf"]
+[ext_resource type="Texture2D" uid="uid://dll1oyb820vxn" path="res://units/player/draft_85x85_down.png" id="3_q34ac"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7813e"]
 radius = 32.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgrnv"]
+atlas = ExtResource("3_q34ac")
+region = Rect2(0, 0, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pw3j1"]
+atlas = ExtResource("3_q34ac")
+region = Rect2(85, 0, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_426n8"]
+atlas = ExtResource("3_q34ac")
+region = Rect2(170, 0, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_23b2o"]
+atlas = ExtResource("3_q34ac")
+region = Rect2(255, 0, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kx5kv"]
+atlas = ExtResource("3_q34ac")
+region = Rect2(340, 0, 85, 85)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7320"]
+atlas = ExtResource("3_q34ac")
+region = Rect2(425, 0, 85, 85)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ugd2a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgrnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pw3j1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_426n8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_23b2o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kx5kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7320")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_50j2u"]
 radius = 32.0
@@ -16,9 +66,16 @@ script = ExtResource("1_5gs8p")
 [node name="physical_body" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_7813e")
 
-[node name="visual" type="Sprite2D" parent="."]
-scale = Vector2(0.41, 0.41)
-texture = ExtResource("2_dhu70")
+[node name="radius_indicator" type="Sprite2D" parent="."]
+self_modulate = Color(0.584314, 0.584314, 0.584314, 1)
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_cmxhf")
+
+[node name="visual" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 4)
+sprite_frames = SubResource("SpriteFrames_ugd2a")
+autoplay = "default"
 
 [node name="vacuum_area" type="Area2D" parent="."]
 
@@ -27,11 +84,5 @@ shape = SubResource("CircleShape2D_50j2u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.125, 1.125)
-
-[node name="radius_indicator" type="Sprite2D" parent="."]
-self_modulate = Color(0.584314, 0.584314, 0.584314, 1)
-texture_filter = 1
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("3_87g2l")
 
 [connection signal="area_entered" from="vacuum_area" to="." method="_on_vacuum_area_area_entered"]

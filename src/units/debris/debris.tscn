@@ -1,20 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwskgv7jf04no"]
 
 [ext_resource type="Script" path="res://units/debris/debris.gd" id="1_e7v18"]
-[ext_resource type="Texture2D" uid="uid://dv5mf04ttkdgp" path="res://icon.svg" id="2_sm3th"]
+[ext_resource type="Texture2D" uid="uid://4gifwpilo5o4" path="res://units/debris/weird_booger.png" id="2_svq5f"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wustb"]
 radius = 50.0
 
 [node name="debris" type="Node2D"]
-position = Vector2(-328, -155)
 script = ExtResource("1_e7v18")
+
+[node name="Icon6" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_svq5f")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_wustb")
-
-[node name="Icon6" type="Sprite2D" parent="."]
-scale = Vector2(0.645, 0.645)
-texture = ExtResource("2_sm3th")
