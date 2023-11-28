@@ -1,0 +1,127 @@
+[gd_scene load_steps=4 format=3 uid="uid://fg1nn5lce4y"]
+
+[ext_resource type="PackedScene" uid="uid://c18uua2jh8130" path="res://units/player/player.tscn" id="1_wjib6"]
+[ext_resource type="Texture2D" uid="uid://dv5mf04ttkdgp" path="res://icon.svg" id="2_g76y4"]
+[ext_resource type="PackedScene" uid="uid://dwskgv7jf04no" path="res://units/debris/debris.tscn" id="3_c86wi"]
+
+[node name="world" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_wjib6")]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(-850, 144)
+scale = Vector2(0.71875, 14.0547)
+texture = ExtResource("2_g76y4")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-98, -157, 1305, -81, 2295, 303, 1197, 460, -213, 509, -2256, 58, -1736, 571, -371, 675, 1422, 652, 2737, 341, 1606, -182, -53, -318)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+color = Color(0.933333, 0.611765, 0.407843, 1)
+polygon = PackedVector2Array(-98, -157, 1305, -81, 2295, 303, 1197, 460, -213, 509, -2256, 58, -1736, 571, -371, 675, 1422, 652, 2737, 341, 1606, -182, -53, -318)
+
+[node name="debris" parent="." instance=ExtResource("3_c86wi")]
+
+[node name="debris2" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-423, -25)
+
+[node name="debris3" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-304, 162)
+
+[node name="debris4" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-535, 141)
+
+[node name="debris5" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-555, -138)
+
+[node name="debris6" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(426, 12)
+
+[node name="debris7" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(331, 142)
+
+[node name="debris8" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(450, 329)
+
+[node name="debris9" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(219, 308)
+
+[node name="debris10" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(199, 29)
+
+[node name="debris11" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1126, 8)
+
+[node name="debris12" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1031, 138)
+
+[node name="debris13" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1150, 325)
+
+[node name="debris14" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(919, 304)
+
+[node name="debris15" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(899, 25)
+
+[node name="debris16" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1042, -250)
+
+[node name="debris17" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1137, -120)
+
+[node name="debris18" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1018, 67)
+
+[node name="debris19" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1249, 46)
+
+[node name="debris20" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1269, -233)
+
+[node name="debris21" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-401, -843)
+
+[node name="debris22" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-496, -713)
+
+[node name="debris23" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-377, -526)
+
+[node name="debris24" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-608, -547)
+
+[node name="debris25" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-628, -826)
+
+[node name="debris26" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(452, -814)
+
+[node name="debris27" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(357, -684)
+
+[node name="debris28" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(476, -497)
+
+[node name="debris29" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(245, -518)
+
+[node name="debris30" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(225, -797)
+
+[node name="debris31" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1224, -846)
+
+[node name="debris32" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1129, -716)
+
+[node name="debris33" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1248, -529)
+
+[node name="debris34" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1017, -550)
+
+[node name="debris35" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(997, -829)

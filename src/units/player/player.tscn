@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://c18uua2jh8130"]
+
+[ext_resource type="Script" path="res://units/player/player.gd" id="1_5gs8p"]
+[ext_resource type="Texture2D" uid="uid://dv5mf04ttkdgp" path="res://icon.svg" id="2_dhu70"]
+[ext_resource type="Texture2D" uid="uid://dgj45bbpndtg4" path="res://assets/visual/noun_circle_dash_pattern_1473951.svg" id="3_87g2l"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7813e"]
+radius = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_50j2u"]
+radius = 32.0
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_5gs8p")
+
+[node name="physical_body" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7813e")
+
+[node name="visual" type="Sprite2D" parent="."]
+scale = Vector2(0.41, 0.41)
+texture = ExtResource("2_dhu70")
+
+[node name="vacuum_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="vacuum_area"]
+shape = SubResource("CircleShape2D_50j2u")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.125, 1.125)
+
+[node name="radius_indicator" type="Sprite2D" parent="."]
+self_modulate = Color(0.584314, 0.584314, 0.584314, 1)
+texture_filter = 1
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_87g2l")
+
+[connection signal="area_entered" from="vacuum_area" to="." method="_on_vacuum_area_area_entered"]
