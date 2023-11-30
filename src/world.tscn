@@ -1,12 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://fg1nn5lce4y"]
+[gd_scene load_steps=6 format=3 uid="uid://fg1nn5lce4y"]
 
 [ext_resource type="Script" path="res://units/world/world.gd" id="1_whfs8"]
 [ext_resource type="PackedScene" uid="uid://bddet3ydv6spm" path="res://units/player/player.tscn" id="1_wjib6"]
 [ext_resource type="Texture2D" uid="uid://dv5mf04ttkdgp" path="res://icon.svg" id="2_g76y4"]
+[ext_resource type="PackedScene" uid="uid://ce0kgcudq57vq" path="res://ui/ui.tscn" id="2_rxv01"]
 [ext_resource type="PackedScene" uid="uid://dwskgv7jf04no" path="res://units/debris/debris.tscn" id="3_c86wi"]
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_whfs8")
+
+[node name="UI" parent="." instance=ExtResource("2_rxv01")]
 
 [node name="player" parent="." instance=ExtResource("1_wjib6")]
 
@@ -21,6 +24,46 @@ texture = ExtResource("2_g76y4")
 polygon = PackedVector2Array(-98, -157, 1305, -81, 2295, 303, 1197, 460, -213, 509, -2256, 58, -1736, 571, -371, 675, 1422, 652, 2737, 341, 1606, -182, -53, -318)
 
 [node name="Polygon2D" type="Polygon2D" parent="StaticBody2D"]
+color = Color(0.933333, 0.611765, 0.407843, 1)
+polygon = PackedVector2Array(-98, -157, 1305, -81, 2295, 303, 1197, 460, -213, 509, -2256, 58, -1736, 571, -371, 675, 1422, 652, 2737, 341, 1606, -182, -53, -318)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(1816, 1236)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PackedVector2Array(-98, -157, 1305, -81, 2295, 303, 1197, 460, -213, 509, -2256, 58, -1736, 571, -371, 675, 1422, 652, 2737, 341, 1606, -182, -53, -318)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2"]
+color = Color(0.933333, 0.611765, 0.407843, 1)
+polygon = PackedVector2Array(-98, -157, 1305, -81, 2295, 303, 1197, 460, -213, 509, -2256, 58, -1736, 571, -371, 675, 1422, 652, 2737, 341, 1606, -182, -53, -318)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-3404, 1494)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
+polygon = PackedVector2Array(-98, -157, 1305, -81, 2295, 303, 1197, 460, -213, 509, -2256, 58, -1736, 571, -371, 675, 1422, 652, 2737, 341, 1606, -182, -53, -318)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D3"]
+color = Color(0.933333, 0.611765, 0.407843, 1)
+polygon = PackedVector2Array(-98, -157, 1305, -81, 2295, 303, 1197, 460, -213, 509, -2256, 58, -1736, 571, -371, 675, 1422, 652, 2737, 341, 1606, -182, -53, -318)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2(-2984, -1910)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D4"]
+polygon = PackedVector2Array(-98, -157, 1305, -81, 2295, 303, 1197, 460, -213, 509, -2256, 58, -1736, 571, -371, 675, 1422, 652, 2737, 341, 1606, -182, -53, -318)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D4"]
+color = Color(0.933333, 0.611765, 0.407843, 1)
+polygon = PackedVector2Array(-98, -157, 1305, -81, 2295, 303, 1197, 460, -213, 509, -2256, 58, -1736, 571, -371, 675, 1422, 652, 2737, 341, 1606, -182, -53, -318)
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2(3974, -1323)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5"]
+polygon = PackedVector2Array(-98, -157, 1305, -81, 2295, 303, 1197, 460, -213, 509, -2256, 58, -1736, 571, -371, 675, 1422, 652, 2737, 341, 1606, -182, -53, -318)
+
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D5"]
 color = Color(0.933333, 0.611765, 0.407843, 1)
 polygon = PackedVector2Array(-98, -157, 1305, -81, 2295, 303, 1197, 460, -213, 509, -2256, 58, -1736, 571, -371, 675, 1422, 652, 2737, 341, 1606, -182, -53, -318)
 
@@ -67,6 +110,126 @@ position = Vector2(919, 304)
 
 [node name="debris15" parent="." instance=ExtResource("3_c86wi")]
 position = Vector2(899, 25)
+
+[node name="debris36" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1993, -567)
+
+[node name="debris37" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1898, -437)
+
+[node name="debris38" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(2017, -250)
+
+[node name="debris39" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1786, -271)
+
+[node name="debris40" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1766, -550)
+
+[node name="debris41" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(2869, -226)
+
+[node name="debris42" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(2774, -96)
+
+[node name="debris43" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(2893, 91)
+
+[node name="debris44" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(2662, 70)
+
+[node name="debris45" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(2642, -209)
+
+[node name="debris46" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(3179, 474)
+
+[node name="debris47" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(3084, 604)
+
+[node name="debris48" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(3203, 791)
+
+[node name="debris49" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(2972, 770)
+
+[node name="debris50" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(2952, 491)
+
+[node name="debris51" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1253, 1004)
+
+[node name="debris52" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1158, 1134)
+
+[node name="debris53" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1277, 1321)
+
+[node name="debris54" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1046, 1300)
+
+[node name="debris55" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(1026, 1021)
+
+[node name="debris56" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1185, 919)
+
+[node name="debris57" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1280, 1049)
+
+[node name="debris58" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1161, 1236)
+
+[node name="debris59" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1392, 1215)
+
+[node name="debris60" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1412, 936)
+
+[node name="debris61" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-2604, 609)
+
+[node name="debris62" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-2699, 739)
+
+[node name="debris63" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-2580, 926)
+
+[node name="debris64" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-2811, 905)
+
+[node name="debris65" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-2831, 626)
+
+[node name="debris66" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-2882, -496)
+
+[node name="debris67" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-2977, -366)
+
+[node name="debris68" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-2858, -179)
+
+[node name="debris69" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-3089, -200)
+
+[node name="debris70" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-3109, -479)
+
+[node name="debris71" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1522, -976)
+
+[node name="debris72" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1617, -846)
+
+[node name="debris73" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1498, -659)
+
+[node name="debris74" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1729, -680)
+
+[node name="debris75" parent="." instance=ExtResource("3_c86wi")]
+position = Vector2(-1749, -959)
 
 [node name="debris16" parent="." instance=ExtResource("3_c86wi")]
 position = Vector2(-1042, -250)
