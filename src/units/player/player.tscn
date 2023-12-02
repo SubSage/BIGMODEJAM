@@ -249,6 +249,7 @@ animations = [{
 radius = 32.0
 
 [node name="player" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_5gs8p")
 
 [node name="physical_body" type="CollisionShape2D" parent="."]
@@ -267,6 +268,8 @@ animation = &"up"
 autoplay = "up"
 
 [node name="vacuum_area" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="vacuum_area"]
 shape = SubResource("CircleShape2D_50j2u")

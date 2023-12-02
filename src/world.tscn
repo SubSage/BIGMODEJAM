@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://fg1nn5lce4y"]
+[gd_scene load_steps=7 format=3 uid="uid://fg1nn5lce4y"]
 
 [ext_resource type="Script" path="res://units/world/world.gd" id="1_whfs8"]
 [ext_resource type="PackedScene" uid="uid://bddet3ydv6spm" path="res://units/player/player.tscn" id="1_wjib6"]
 [ext_resource type="Texture2D" uid="uid://dv5mf04ttkdgp" path="res://icon.svg" id="2_g76y4"]
 [ext_resource type="PackedScene" uid="uid://ce0kgcudq57vq" path="res://ui/ui.tscn" id="2_rxv01"]
 [ext_resource type="PackedScene" uid="uid://dwskgv7jf04no" path="res://units/debris/debris.tscn" id="3_c86wi"]
+[ext_resource type="PackedScene" uid="uid://b6ivnvwr3jfxi" path="res://units/enemies/basic_enemy.tscn" id="6_qknsq"]
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_whfs8")
@@ -290,3 +291,6 @@ position = Vector2(1017, -550)
 
 [node name="debris35" parent="." instance=ExtResource("3_c86wi")]
 position = Vector2(997, -829)
+
+[node name="basic_enemy" parent="." instance=ExtResource("6_qknsq")]
+position = Vector2(-652, 188)
